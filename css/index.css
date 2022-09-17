@@ -5,18 +5,20 @@ body{
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header img{
     width: 200px;
     margin: 4% 0 0 5%;
 }
 main{
-    width: 1250px;
+    width: 90%;
     display: flex;
-    margin: 6.5% 0 0 5%;
+    margin: 5% 0 0 5%;
 }
 main img{
-    width: 800px;
+    width: 55%;
 }
 .info{
     display: flex;
@@ -39,14 +41,61 @@ main img{
     box-shadow: 2px 2px 10px 4px rgb(0 0 0 / 40%);
 }
 .contact{
-    filter: invert(100%) sepia(2%) saturate(1%) hue-rotate(118deg) brightness(104%) contrast(101%);
-    width: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-content: end;
-    width: 1350px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    padding-top: 30%;
 }
-.contact img:last-of-type{
-    outline: 1px solid white;
+.contact img{
+    filter: invert(100%) sepia(2%) saturate(1%) hue-rotate(118deg) brightness(104%) contrast(101%);
+    width: 25px;
+    margin: 5%;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(300, 69%, 71%);
+}
+.contact img:hover{
+    cursor: pointer;
+    filter: invert(27%) sepia(66%) saturate(2012%) hue-rotate(276deg) brightness(95%) contrast(90%);
+}
+
+
+@media (max-width: 375px) {
+    body{
+        background: url("../img/bg-mobile.svg") hsl(257, 40%, 49%);
+    }
+    header img{
+        width: 70px;
+    }
+    main{
+        flex-direction: column;
+        justify-content: center;
+        justify-self: center;
+        align-content: center;
+    }
+    .info{
+        width: 180px;
+        font-size: 10px;
+        text-align: center;
+        margin: 0%;
+    }
+    .info h1{
+        font-size: 15px;
+        width: 180px;
+    }
+    .info button{
+        width: 120px;
+        height: 25px;
+        font-size: 10px;
+    }
+    .contact{
+        justify-self: flex-start;
+        align-self: center;
+    }
+    .contact img{
+        width: 10px;
+    }
 }
